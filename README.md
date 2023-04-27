@@ -63,7 +63,7 @@
 
 # 1-3. 프로젝트 수행 절차 및 방법
 
-[타임테이블](https://www.notion.so/630e4b6c23ee46ea84c00f9db0aa3da6)
+[타임테이블](https://www.notion.so/630e4b6c23ee46ea84c00f9db0aa3da6](https://user-images.githubusercontent.com/71757471/234790282-2323bbac-8fb5-4567-8e05-1dc11f250f1a.png)
 
 <전반적인 Process>
 
@@ -79,7 +79,7 @@
 
 6) 모델 성능 향상을 위한 Ensemble & Hyper parameter tuning
 
-![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/71757471/234790327-8d894529-81cc-4501-8b7a-c85008c9aa52.png)
 
 # 1-4. 프로젝트 수행 결과
 
@@ -108,27 +108,27 @@
         - 대부분 Categorical Feature로 이루어졌기 때문에 이러한 부분을 Target Encoding으로 대응할 수 있는 Catboost 모델을 사용하였습니다.
         - 아래에 언급한 그림과 같이 group(user_id).var()과 group(book_author).var()의 경우, 0에 근접한 분포를 보이는 것을 알 수 있습니다. 즉, 특정 유저 또는 책을 작성한 저자에 따른 평점의 경향성이 존재함을 의미 하는 것으로, Catboost에서 제공하는 Target Encoding이 이러한 경향성을 담아낼 수 있을 것으로 기대하여 Catboost를 사용하였습니다.
         
-        ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%201.png)
+        ![Untitled](https://user-images.githubusercontent.com/71757471/234790282-2323bbac-8fb5-4567-8e05-1dc11f250f1a.png)
         
     - PDCNC
         - Baseline으로 제공되는 DCN에 Context Information을 추가하여 딥러닝 모델을 구성하였습니다. 그래서 Context Information을 사용하는 그밖에 딥러닝 모델들인 FM, FFM, WDN과 비교하여 아래에 언급한 그림처럼 PDCNC이 월등한 성능을 보여 PDCNC을 사용하였습니다.
             
-            ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%202.png)
+            ![Untitled](https://user-images.githubusercontent.com/71757471/234790298-89f2ca9f-a6a9-430f-aed2-1da578f0e52c.png)
             
 - 모델 평가 및 개선
     - 모델 평가
         - Catboost : Cross Validation
             
-            ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%203.png)
+            ![Untitled](https://user-images.githubusercontent.com/71757471/234790309-d7f76eec-2fba-4513-90e8-322935d62f9c.png)
             
         - PDCNC : Holdout(train_test_split(ratio = 0.2))
             
-            ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%204.png)
+            ![Untitled](https://user-images.githubusercontent.com/71757471/234790313-63ea6f65-563b-441e-8266-43b190838879.png)
             
     - 모델 개선
         - Each Single Model
             
-            ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%205.png)
+            ![Untitled](https://user-images.githubusercontent.com/71757471/234790314-3dab2715-abe8-4e95-ab6a-af0fdf241f2d.png)
             
         1. N-Stratified Fold를 이용해 1개의 Fold는 Validation Fold, 나머지는 Train Fold로 지정해 총 N번의 반복이 이루어집니다. 
         2. 각 반복에서 Optuna로 Hyper Parameter Tuning이 이루어지고 학습된 N-Estimators에 대해 Voting으로 모델을 개선했습니다. 
@@ -139,8 +139,8 @@
 - 시연 결과(모델 성능)
     - Single Model(Catboost) Prediction
         
-        ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%206.png)
+        ![Untitled](https://user-images.githubusercontent.com/71757471/234790316-aec3f40b-609a-4475-b575-dc828bfd0969.png)
         
     - Ensemble(0.6 * Catboost + 0.4 * PDCNC) Prediction
         
-        ![Untitled](%E1%84%85%E1%85%A2%E1%86%B8%E1%84%8B%E1%85%A5%E1%86%B8%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%2015c061ad23ae4965842d4552c220cbbb/Untitled%207.png)
+        ![Untitled](https://user-images.githubusercontent.com/71757471/234790320-123712b9-0145-41c1-9a04-f0a9d3ada95c.png)
