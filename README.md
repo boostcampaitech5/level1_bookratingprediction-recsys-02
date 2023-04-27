@@ -57,8 +57,6 @@
 
 # 1-3. 프로젝트 수행 절차 및 방법
 
-[타임테이블](https://www.notion.so/630e4b6c23ee46ea84c00f9db0aa3da6](https://user-images.githubusercontent.com/71757471/234790282-2323bbac-8fb5-4567-8e05-1dc11f250f1a.png)
-
 <전반적인 Process>
 
 1) 강의 전부 듣기, 실습 + 미션 파일로 대회 방향성 파악
