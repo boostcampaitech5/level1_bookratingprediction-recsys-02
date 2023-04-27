@@ -26,13 +26,7 @@
     │   │   ├── image_data.py
     │   │   └── text_data.py
     │   ├── models
-    │   │   ├── CNN_FM # 파일 구조 상 표시 생략
-    │   │   ├── DCN
-    │   │   ├── DeepCoNN
-    │   │   ├── FFM
-    │   │   ├── FM
-    │   │   ├── NCF
-    │   │   └── WDN
+    │   │   ├── PDCNC()
     │   ├── train
     │   │   └── trainer.py
     │   └── utils.py
